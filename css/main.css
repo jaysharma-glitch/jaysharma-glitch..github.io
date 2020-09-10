@@ -58,6 +58,7 @@ body {
   height: 90px;
   width: 70;
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .bg-dark {
@@ -65,9 +66,9 @@ body {
 }
 
 .bg-dark.scrolled {
-  background: #040a0c !important;
+  background: #ebebe7 !important;
 }
-
+/* #ebe7d0 */
 .navbar-brand {
   padding-left: 50px;
   padding-top: 0;
@@ -75,11 +76,16 @@ body {
   margin: 0;
   /*margin-right:200px;*/
 }
-.navbar-toggler {
-  margin-right: 50px;
-  margin-top: 15px;
-  transition: transform 0.4s;
+
+@media screen and (max-width: 800px) {
+  .navbar-brand {
+    padding-left: 20px;
+  }
+  .navbar-toggler {
+    padding-right: 20px;
+  }
 }
+
 .navbar-toggler:hover {
   transform: scale(1.1);
 }
@@ -181,7 +187,7 @@ body {
   font-size: 1.2rem;
   font-family: "Exo", sans-serif;
   font-weight: 400;
-  color: white;
+  color: #ebebe7;
   font-size: 2rem;
   padding: 0;
   margin: 0;
@@ -195,12 +201,12 @@ body {
 }
 
 .nav-link:hover {
-  color: #ff7d27;
+  color: white;
   transform: scale(1.1);
 }
 
 #link {
-  color: white;
+  color: #333333;
   font-size: 2rem;
 }
 
@@ -210,7 +216,7 @@ body {
 } */
 
 #link:hover {
-  color: #ff7d27;
+  color: #043353;
   transform: scale(1.1);
 }
 
@@ -220,11 +226,11 @@ body {
 } */
 
 .nav-link.scroll {
-  color: white;
+  color: #333333;
 }
 
 .nav-link.scroll:hover {
-  color: #ff7d27;
+  color: #043353;
   transform: scale(1.1);
 }
 
@@ -325,7 +331,7 @@ body {
 
 .primary-button a {
   display: inline-block;
-  background-color: #ff7d27;
+  background-color: #214655;
   padding: 15px 24px;
   border-radius: 3px;
   text-transform: uppercase;
@@ -751,7 +757,7 @@ section {
 
 #contact button {
   display: inline-block;
-  background-color: #ff7d27;
+  background-color: #214655;
   padding: 15px 24px;
   width: 100%;
   border-radius: 3px;
@@ -773,17 +779,29 @@ section {
 footer {
   text-align: center;
   background-color: #040a0c;
-  padding: 70px 0px;
+  padding: 20px 0px;
 }
 
 footer .primary-button {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  display: inline-block;
 }
 
 footer ul {
   padding: 0px;
   margin: 0px;
   list-style: none;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+}
+@media screen and (max-width: 800px) {
+  footer .primary-button {
+    display: block;
+  }
+  footer ul {
+    position: static;
+  }
 }
 
 footer ul li {
@@ -797,8 +815,8 @@ footer ul li a {
   line-height: 40px;
   text-align: center;
   display: inline-block;
-  background-color: #ff7d27;
-  color: #282b2f;
+  background-color: #214655;
+  color: white;
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.5s;
@@ -808,6 +826,12 @@ footer ul li a {
 footer ul li a:hover {
   color: #282b2f;
   background-color: #ff8e43;
+}
+
+@media screen and (max-width: 800px) {
+  footer ul li a {
+    font-size: 2 rem;
+  }
 }
 
 footer p {

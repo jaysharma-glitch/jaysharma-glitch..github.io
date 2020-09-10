@@ -1,3 +1,8 @@
+//auto collapsing of nav-bar
+$(".navbar-collapse a").click(function () {
+  $(".navbar-collapse").collapse("hide");
+});
+
 // for giving nav-bar bg
 $(window).scroll(function () {
   $("nav").toggleClass("scrolled", $(this).scrollTop() > 450);
